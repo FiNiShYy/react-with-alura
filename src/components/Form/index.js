@@ -12,14 +12,19 @@ const Form = () => {
         'Integrador'
     ]
 
+    const onSave = (event) => {
+        event.preventDefault()
+        console.log('Form was submited')
+    }
+
     return (
         <section className="formSection">
-            <form>
+            <form onSubmit={onSave}>
                 <h2>Preencha os dados para criar o card do colaborador</h2>
-                <TextField label="Nome" placeholder="Digite seu nome"/>
-                <TextField label="Cargo" placeholder="Digite seu cargo"/>
+                <TextField obrigatorio={true} label="Nome" placeholder="Digite seu nome"/>
+                <TextField obrigatorio={true} label="Cargo" placeholder="Digite seu cargo"/>
                 <TextField label="Imagem" placeholder="Digite o endereço da imagem"/>
-                <DropdownList label="Time" items={times}/>
+                <DropdownList obrigatorio={true} label="Time" items={times}/>
                 <ButtonRe>
                         Criar card
                 </ButtonRe>
