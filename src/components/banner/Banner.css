@@ -1,7 +1,7 @@
 
 
 .banner {
-    background-color: #6278F7;
+    background: linear-gradient(90deg, rgba(103,22,205,1) 50%, rgba(40,113,250,1) 50%);
     text-align: center;
 }
 
