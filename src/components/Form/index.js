@@ -6,13 +6,6 @@ import { useState } from 'react'
 
 const Form = (props) => {
 
-    const times = [
-        'Programação',
-        'Chatwoot',
-        'CRM',
-        'Integrador'
-    ]
-
     const [nome, setNome] = useState('')
     const [cargo, setCargo] = useState('')
     const [imagem, setImagem] = useState('')
@@ -26,6 +19,10 @@ const Form = (props) => {
             imagem,
             time
         })
+        setNome('')
+        setCargo('')
+        setImagem('')
+        setTime('')
     }
 
     return (
@@ -55,7 +52,7 @@ const Form = (props) => {
                 <DropdownList 
                     obrigatorio={true} 
                     label="Time" 
-                    items={times}
+                    items={props.times}
                     valor={time}
                     aoAlterado={valor => setTime(valor)}
                 />
